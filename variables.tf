@@ -4,4 +4,6 @@ variable "ami" {
 variable "aws_region" {
   type = string
 }
-
+variable "ip" {
+  type = string
+}
