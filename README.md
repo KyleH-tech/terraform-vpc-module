@@ -32,6 +32,13 @@ This project deploys a secure AWS infrastructure using Terraform
 
 ## 📦 Usage
 
+module "vpc" {
+  source     = "git::https://github.com/KyleH-tech/terraform-vpc-module.git?ref=v1.0.0"
+  aws_region = "us-east-1"
+  ami        = "ami-0c02fb55956c7d316"
+
+}
+
 ```bash
 # 1. Clone this repo
 git clone https://github.com/KyleH-tech/terraform-bastion-ec2.git
@@ -73,6 +80,14 @@ chmod 600 ~/.ssh/private_key.pem
 ssh -i ~/.ssh/private_key.pem ec2-user@<PRIVATE_INSTANCE_PRIVATE_IP>
 
 
+
+Inputs
+"aws_region"	AWS region to deploy into	
+"ami"	AMI ID for EC2 instances	
+
+Outputs
+"bastion_public_ip"	Public IP of the bastion instance
+"private_key_pem" RSA private key
 
 📌 Notes
 Ensure your security group for the Bastion only allows your IP (x.x.x.x/32)
