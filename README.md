@@ -32,14 +32,14 @@ This project deploys a secure AWS infrastructure using Terraform
 
 ## 📦 Usage
 
+```bash
 module "vpc" {
   source     = "git::https://github.com/KyleH-tech/terraform-vpc-module.git?ref=v1.0.0"
   aws_region = "us-east-1"
   ami        = "ami-0c02fb55956c7d316"
-
+  ip  = "<YOUR-IP/32>"
 }
 
-```bash
 # 1. Clone this repo
 git clone https://github.com/KyleH-tech/terraform-bastion-ec2.git
 cd terraform-bastion-ec2
