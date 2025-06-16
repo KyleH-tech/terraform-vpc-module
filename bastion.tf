@@ -20,7 +20,7 @@ resource "aws_security_group" "bastion_sg" {
     to_port   = 22
     protocol  = "tcp"
     #update the cidr_blocks argument with either your pulic IP or 0.0.0.0/0 to allow all traffic 
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [var.ip]
   }
   egress {
     from_port   = 0
