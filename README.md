@@ -83,7 +83,8 @@ ssh -i ~/.ssh/private_key.pem ec2-user@<PRIVATE_INSTANCE_PRIVATE_IP>
 
 Inputs
 "aws_region"	AWS region to deploy into	
-"ami"	AMI ID for EC2 instances	
+"ami"	AMI ID for EC2 instances
+"ip" Your public IP
 
 Outputs
 "bastion_public_ip"	Public IP of the bastion instance
