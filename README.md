@@ -93,3 +93,4 @@ Outputs
 📌 Notes
 Ensure your security group for the Bastion only allows your IP (x.x.x.x/32)
 AWS charges apply for running EC2 instances and NAT Gateways
+If you dont want the bastion and want a cleaner code use the updated folder. It only containes a VPC, internet gateway, route tables/associations, public/private subnets, nat gateway and EIP's. Just update variable config file and edit "variable azs" list to add or subtract az's.
